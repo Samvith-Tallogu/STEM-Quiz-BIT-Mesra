@@ -1,2 +1,2 @@
 # STEM-Quiz
- IIT Roorkee
+ BIT Mesra
