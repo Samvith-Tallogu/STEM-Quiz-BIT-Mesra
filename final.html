@@ -1,0 +1,33 @@
+<html>
+    <title>STEM Quiz!</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    </head>
+    <body>
+        <br>
+        <center>
+            <h1 style="background-color:deepskyblue; color: white; margin-left: 300px; margin-right: 300px; border-radius: 10px; padding-top: 10px; padding-bottom: 10px;">STEM Quiz!</h1>
+        </center>
+        <hr>
+        <h2 align="center" id="final1"></h2>
+        <h2 align="center" id="final2"></h2>
+        <h2 align="center" id="final3"></h2>
+        <h2 align="center" id="final4"></h2>
+        <br>
+        <br>
+        <div class="progress" style="margin-left: 250px; margin-right: 250px; border-radius: 8px;">
+            <div id="qprog" class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="20" style="width: 0%;"></div>
+        </div>
+        <br>
+        <center>
+            <button id="home" class="btn btn-info" onclick="gotohome()">Back to Home Page</button>
+        </center>
+        <script src="./js/final.js"></script>
+    </body>
+</html>

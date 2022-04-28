@@ -1,0 +1,46 @@
+<html>
+<title>STEM Quiz!</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <style src="./style/style.css"></style>
+</head>
+
+<body>
+    <center>
+        <h2>User Registration </h2>
+        <h3>Kindly read the quiz format and register</h3>
+        <h3>The topics covered are STEM - Science, Technology, Engineering & Math</h3>
+        <br><br>
+
+    </center>
+    <section style="border-radius: 20px;background-color: gainsboro; margin-right: 10%; margin-left: 10%; padding-bottom: 10px; margin-bottom: 30px;">
+        <section align="center">
+            <img style="margin-top: 2%; width: 50px; height: 50px;" id="instructions" src="images/instructions.png">
+            <h4>Quiz Format</h4>
+            <h4>Total Questions: 20</h4>
+            <h4>Correct answer: +5 points</h4>
+            <h4>Wrong answer: -1 point</h4>
+            <h4>Maximum Score: 100</h4>
+        </section>
+        <section
+            style="background-color: red; margin-left: 10%;margin-right: 10%; padding-left: 30px; padding-right: 30px; padding-top: 40px; margin-bottom: 30px; border-radius: 15px;">
+            <h3 style="color: whitesmoke;">STEM Quiz Candidate details</h3> <br>
+            <input type="text" placeholder="Enter candidate name" class="form-control" id="input_name"> <br>
+            <input type="email" placeholder="Email Adress" class="form-control" id="input_mail"> <br><br>
+            <button onclick="send_details()" style="margin-right: 3%; margin-top: 1%; margin-bottom: 2%;" class="btn btn-info">
+                Submit details and Start</button>
+        </section>
+        
+    </section>
+    
+    <script src="./js/detailpg.js"></script>
+</body>
+
+</html>

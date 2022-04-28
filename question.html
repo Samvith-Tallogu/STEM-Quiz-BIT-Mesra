@@ -1,0 +1,54 @@
+<html>
+<title>STEM Quiz!</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <style src="./style/style.css"></style>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+</head>
+
+<body>
+    <br>
+    <center>
+        <h1 style="background-color:deepskyblue; color: white; margin-left: 300px; margin-right: 300px; border-radius: 10px; padding-top: 10px; padding-bottom: 10px;">STEM Quiz!</h1>
+    </center>
+    <h2 align="center" id="question_number"></h2>
+    <h2 align="center" id="question"></h2> <br><br><br>
+    <div id="chioce-outer-div" style="text-align:center">
+        <div id="choice-inner-div" style="display:inline-block; text-align:left">
+            <input id="c1" type="radio" name="choice" value="c1">
+            <label id="l1" for="c1"></label>
+            <br>
+            <input id="c2" type="radio" name="choice" value="c2">
+            <label id="l2" for="c2"></label>
+            <br>
+            <input id="c3" type="radio" name="choice" value="c3">
+            <label id="l3" for="c3"></label>
+            <br>
+            <input id="c4" type="radio" name="choice" value="c4">
+            <label id="l4" for="c4"></label>
+            <br>
+        
+            <br><br><br>
+            <div style="float: left">
+                <button onclick="final_screen()" class="btn btn-danger" style="width: 150px; margin-right: 30px;" id="Exit">Exit</button>
+            </div>
+            <div style="float: right">
+                <button onclick="next_question()" class="btn btn-primary" style="width: 150px; margin-left: 30px;" id="next">Next</button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <h3 style="color: crimson;" align="center" id="score"></h3>
+    <div class="progress" style="margin-left: 250px; margin-right: 250px; border-radius: 8px;">
+        <div id="qprog" class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="20" style="width: 0%;">
+        </div>
+    </div>
+</body>
+<script src="./js/question.js"></script>
+</html>

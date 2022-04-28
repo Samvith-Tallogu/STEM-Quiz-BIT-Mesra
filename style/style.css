@@ -1,0 +1,14 @@
+#myModal{
+    background-color: white;
+    width: 800px;
+}
+body{
+    background: red;
+}
+
+#score{
+    color: red;
+}
+#icon{
+    float: left;
+}
