@@ -1,15 +1,15 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyA352FVbV9bJQo9LaJy4XVAUkB2pOMn38E",
-    authDomain: "stem-quiz-fde57.firebaseapp.com",
-    databaseURL: "https://stem-quiz-fde57-default-rtdb.firebaseio.com",
-    projectId: "stem-quiz-fde57",
-    storageBucket: "stem-quiz-fde57.appspot.com",
-    messagingSenderId: "933518400945",
-    appId: "1:933518400945:web:da16e8dd128aeca93fb190",
-    measurementId: "G-2VXPZT9F1X"
-  };  
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+    apiKey: "AIzaSyCe_Kho7Vm7eCQP4NbynHAzZfeA2Duw_t4",
+    authDomain: "stem-quiz-bit-mesra.firebaseapp.com",
+    databaseURL: "https://stem-quiz-bit-mesra-default-rtdb.firebaseio.com",
+    projectId: "stem-quiz-bit-mesra",
+    storageBucket: "stem-quiz-bit-mesra.appspot.com",
+    messagingSenderId: "569996961213",
+    appId: "1:569996961213:web:8d5de38ab20bef5a855ed4",
+    measurementId: "G-NRRC4LFB5F"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 // Final screen message
 final_message();
