@@ -37,7 +37,7 @@ function final_message(){
         name: user,  
         email: user_email,
         question_number: question_number,
-        score: score
+        score: parseInt(score)
        }
    );
 }

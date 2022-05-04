@@ -11,30 +11,34 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-function load_leaderboard() {
-  var user_ref = firebase.database().ref("users");
-  user_ref.on('value', (snapshot) => {
-    const data = snapshot.val();
-    console.log(data);
-
-  });
-}
-
+/*
 function getData() {
-  var user_ref = firebase.database().ref("users").orderByChild('score');
-  user_ref.on('value', function (snapshot) {
+  var score_ref = firebase.database().ref("users").orderByChild("score").limitTo(5);
+  score_ref.on('value', function (snapshot) {
     //document.getElementById("output").innerHTML = ""; 
     snapshot.forEach(function (childSnapshot) {
       userid = childSnapshot.key;
       console.log("user id: " + userid);
-      console.log("User name: " + childSnapshot.val().name 
-        + " Score: " +childSnapshot.val().score);
+      console.log("User name: " + childSnapshot.val().name + " Score: " +childSnapshot.val().score);
       
       //row = "<div class='user_id' id="+userid+" onclick='redirectToRoomName(this.id)' >#"+ Room_names +"</div><hr>";
       //document.getElementById("output").innerHTML += row;
     });
   });
 }
+*/
+
+function getData(){
+  var userRef = firebase.database().ref("users");
+  userRef.orderByChild("score").once('value', function(snapshot) {
+    console.log(snapshot.val());
+  })
+}
+
+
+
+
+
+
 //load_leaderboard();
 getData();
