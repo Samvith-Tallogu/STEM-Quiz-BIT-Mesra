@@ -29,16 +29,16 @@ function getData() {
 */
 
 function getData(){
-  var userRef = firebase.database().ref("users");
-  userRef.orderByChild("score").once('value', function(snapshot) {
-    console.log(snapshot.val());
-  })
+  var userRef = firebase.database().ref('users');
+  userRef.orderByChild('score').limitToLast(3).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      //console.log(childSnapshot.val());
+      //console.log(childSnapshot.val().name + " " + childSnapshot.val().score);
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      //console.log("Name: " + childSnapshot.val().name, + " Object:" + childSnapshot.val());
+    }); 
+  });
 }
-
-
-
-
-
 
 //load_leaderboard();
 getData();
