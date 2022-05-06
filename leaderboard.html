@@ -1,50 +1,78 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-        
-        <style>
-            body
-            {
-                background-image: linear-gradient(to left bottom, #33a0f1, #2591d9, #1882c1, #0a73aa, #006494);
-            }
-            #leaderboard{
-                background-color: #EEA47FFF;
-                margin-top: 100px;
-                margin-bottom: 50px; 
-                margin-right: 50px; 
-                margin-left: 50px;
-            }
-            #leaderboard-main{
-                background-color: #EEA47FFF;
-                color: #2591d9;
-                margin-right: 200px;
-                margin-left: 200px;
-            }
-        </style>
-        
-    </head>
-    <body id="lbb">
-        <center>
-            <h2 style="background-color:whitesmoke; margin-left: 500px; margin-right: 500px; padding-top: 10px; padding-bottom: 10px; border-radius: 15px;">Leaderboard!</h2><hr style="margin-left: 100px; margin-right: 100px;">
-            <div id="leaderboard" style="background-color: #EEA47FFF;">
-                <h3 style= "float: left; margin-left: 400px; border-right: 2px; border-color: black; color: whitesmoke;">Name</h3>
-                <h3 style="float: right; margin-right: 400px; color: whitesmoke;">Score</h3><br><br>
-                <div id="leaderboard-main">
-                    <label id="u1"> <label id="s1"></label></label>
-                    <label id="u2"> <label id="s2"></label></label>
-                    <label id="u3"> <label id="s3"></label></label>
-                    <label id="u4"> <label id="s4"></label></label>
-                    <label id="cu"> <label id="cs"></label></label>
-                </div>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+    <style>
+        body {
+            background-image: linear-gradient(to left bottom, #33a0f1, #2591d9, #1882c1, #0a73aa, #006494);
+        }
+
+        #leaderboard {
+            background-color: #EEA47FFF;
+            margin-top: 4%;
+            margin-right: 5%;
+            margin-left: 5%;
+            border-radius: 20px;
+            padding-bottom: 3px;
+        }
+
+        #leaderboard-level2 {
+            background-color: white;
+            margin: 2%;
+            border-radius: 10px;
+            color: whitesmoke;
+            padding-bottom: 50px;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+    </style>
+
+</head>
+
+<body id="lbb">
+    <center>
+        <h2
+            style="background-color:whitesmoke; margin-left: 500px; margin-right: 500px; padding-top: 10px; padding-bottom: 10px; border-radius: 15px;">
+            Leaderboard!</h2>
+        <hr style="margin-left: 100px; margin-right: 100px;">
+        <h3 style="color:white ;">Our STEM Champions So Far!</h3>
+        <div id="leaderboard" style="background-color: #EEA47FFF;">
+            <h3 style="float: left; margin-left: 400px; border-right: 2px; border-color: black; color: whitesmoke;">Name
+            </h3>
+            <h3 style="float: right; margin-right: 400px; color: whitesmoke;">Score</h3><br><br>
+            <div id="leaderboard-level2">
+                <br>
+                <label id="u1"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: left; margin-left: 22%; font-weight: 400; font-size:larger;"></label>
+                <label id="s1"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: right; margin-right: 22.5%; font-weight: 400; font-size:larger;"></label><br><br>
+                <label id="u2"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: left; margin-left: 22%; font-weight: 400; font-size:larger;"></label>
+                <label id="s2"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: right; margin-right: 22.5%; font-weight: 400; font-size:larger;"></label><br><br>
+                <label id="u3"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: left; margin-left: 22%; font-weight: 400; font-size:larger;"></label>
+                <label id="s3"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: right; margin-right: 22.5%; font-weight: 400; font-size:larger;"></label><br><br>
+                <label id="u4"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: left; margin-left: 22%; font-weight: 400; font-size:larger;"></label>
+                <label id="s4"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: right; margin-right: 22.5%; font-weight: 400; font-size:larger;"></label><br><br>
+                <label id="u5"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: left; margin-left: 22%; font-weight: 400; font-size:larger;"></label>
+                <label id="s5"
+                    style="background-color: dodgerblue; padding: 0.5%; padding-left: 10%;padding-right: 10%; border-radius: 10px; float: right; margin-right: 22.5%; font-weight: 400; font-size:larger;"></label><br><br>
             </div>
-        </center>
-        <script src="./js/leaderboard.js"></script>
-    </body>
-    
-</html> 
+        </div>
+    </center>
+    <script src="./js/leaderboard.js"></script>
+</body>
+
+</html>

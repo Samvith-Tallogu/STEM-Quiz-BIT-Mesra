@@ -32,13 +32,79 @@ function getData(){
   var userRef = firebase.database().ref('users');
   userRef.orderByChild('score').limitToLast(3).once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
-      //console.log(childSnapshot.val());
-      //console.log(childSnapshot.val().name + " " + childSnapshot.val().score);
       console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
-      //console.log("Name: " + childSnapshot.val().name, + " Object:" + childSnapshot.val());
+      document.getElementById("u1").innerHTML = childSnapshot.val().name;
     }); 
   });
+
+  userRef.orderByChild('score').limitToLast(3).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("s1").innerHTML = childSnapshot.val().score;
+    }); 
+  });
+
+  userRef.orderByChild('score').limitToFirst(4).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("u2").innerHTML = childSnapshot.val().name;
+    }); 
+  });
+
+  userRef.orderByChild('score').limitToFirst(4).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("s2").innerHTML = childSnapshot.val().score;
+    }); 
+  });
+  
+  
+  userRef.orderByChild('score').limitToFirst(3).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("u3").innerHTML = childSnapshot.val().name;
+    }); 
+  });
+
+  userRef.orderByChild('score').limitToFirst(3).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("s3").innerHTML = childSnapshot.val().score;
+    }); 
+  }); 
+
+
+  userRef.orderByChild('score').limitToFirst(2).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("u4").innerHTML = childSnapshot.val().name;
+    }); 
+  });
+
+  userRef.orderByChild('score').limitToFirst(2).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("s4").innerHTML = childSnapshot.val().score;
+    }); 
+  });
+  
+  userRef.orderByChild('score').limitToFirst(1).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("u5").innerHTML = childSnapshot.val().name;
+    }); 
+  });
+
+  userRef.orderByChild('score').limitToFirst(2).once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("s5").innerHTML = childSnapshot.val().score;
+    }); 
+  });
+
 }
 
-//load_leaderboard();
+
 getData();
+
+// + "/" + childSnapshot.val().score
