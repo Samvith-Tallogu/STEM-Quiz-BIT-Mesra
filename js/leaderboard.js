@@ -11,22 +11,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-/*
-function getData() {
-  var score_ref = firebase.database().ref("users").orderByChild("score").limitTo(5);
-  score_ref.on('value', function (snapshot) {
-    //document.getElementById("output").innerHTML = ""; 
-    snapshot.forEach(function (childSnapshot) {
-      userid = childSnapshot.key;
-      console.log("user id: " + userid);
-      console.log("User name: " + childSnapshot.val().name + " Score: " +childSnapshot.val().score);
-      
-      //row = "<div class='user_id' id="+userid+" onclick='redirectToRoomName(this.id)' >#"+ Room_names +"</div><hr>";
-      //document.getElementById("output").innerHTML += row;
-    });
-  });
-}
-*/
 
 function getData(){
   var userRef = firebase.database().ref('users');
@@ -42,7 +26,4 @@ function getData(){
   });
 }
 
-
 getData();
-
-// + "/" + childSnapshot.val().score

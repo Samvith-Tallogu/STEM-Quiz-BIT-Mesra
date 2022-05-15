@@ -13,12 +13,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function send_details() {
-  //console.log("send details() invoked");
+  
   c_name = document.getElementById("input_name").value;
   c_email = document.getElementById("input_mail").value;
-  //console.log(c_name);
-  //console.log(c_email);
-  //console.log(c_age);
   var key;
   firebase.database().ref("users/").push({
     name: c_name,
@@ -32,10 +29,6 @@ function send_details() {
     localStorage.setItem("score", 0);
     localStorage.setItem("user_name", c_name);
     localStorage.setItem("user_email", c_email);
-    //console.log("user_id: " + localStorage.getItem("user_id"));
-    //console.log("question_number: " + localStorage.getItem("question_number"));
-    //console.log("score: " + localStorage.getItem("score"));
-    //console.log("key: " + key);
     window.location = "./question.html";
   });
 
