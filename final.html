@@ -9,10 +9,43 @@
         <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
     </head>
+    <style>
+        #leaderboard-level2 {
+            background-color: white;
+            margin: 2%;
+            border-radius: 10px;
+            color: whitesmoke;
+            padding-bottom: 50px;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        #score-heading{
+            background-color: cornflowerblue;
+            margin-right: 40%;
+            margin-left: 40%;
+            padding-bottom: 1%;
+            padding-top: 1%;
+            border-radius: 10px;
+        }
+        li {
+            position: relative;
+            font-size: x-large;
+            counter-increment: leaderboard;
+            color: black;
+            margin-left: 35%;
+            font-weight: 600;
+        }
+        hr{
+            margin-right: 32%;
+            margin-left: 27%;
+            height: 0.4%;
+            background-color: black;
+        }
+    </style>
     <body>
         <br>
         <center>
-            <h1 style="background-color:deepskyblue; color: white; margin-left: 300px; margin-right: 300px; border-radius: 10px; padding-top: 10px; padding-bottom: 10px;">STEM Quiz!</h1>
+            <h1 style="background-color:deepskyblue; color: white; margin-left: 300px; margin-right: 300px; padding-top: 10px; padding-bottom: 10px;">STEM Quiz!</h1>
         </center>
         <hr>
         <h2 align="center" id="final1"></h2>
@@ -24,10 +57,57 @@
         <div class="progress" style="margin-left: 250px; margin-right: 250px; border-radius: 8px;">
             <div id="qprog" class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="20" style="width: 0%;"></div>
         </div>
-        <br>
+        <hr>
         <center>
-            <button id="home" class="btn btn-info" onclick="gotohome()">Back to Home Page</button><br><br>
-            <button id="leaderboard-direct" class="btn btn-danger" onclick="open_leaderboard()">View Live Leaderboard</button>
+            <h2 id="score-heading">Scoreboard</h3>
+        </center>
+        <div id="leaderboard-level2">
+            <br>
+            <section id="header_lead">
+                <h2 style="color:black ; margin-left: 38%; float: left; color:darkblue;">Name</h2>
+            </section> 
+            <ol> 
+                    <br><br><br><br>
+                    <li>
+                        <label id="u1"
+                            style=" float: left; margin-left: 02%; font-weight: 600; "></label>
+                        <label id="s1"
+                            style=" float: right; margin-right: 60%; font-weight: 600; "></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label id="u2"
+                            style=" float: left; margin-left: 02%; font-weight: 600; "></label>
+                        <label id="s2"
+                            style=" float: right; margin-right: 60%; font-weight: 600; "></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label id="u3"
+                            style=" float: left; margin-left: 02%; font-weight: 600; "></label>
+                        <label id="s3"
+                            style=" float: right; margin-right: 60%; font-weight: 600; "></label>
+                    </li>
+                    <hr>
+                    <li>
+                        <label id="u4"
+                            style=" float: left; margin-left: 02%; font-weight: 600; "></label>
+                        <label id="s4"
+                            style=" float: right; margin-right: 60%; font-weight: 600; "></label>
+                    </li>
+                    <hr>    
+                    <li>
+                        <label id="u5"
+                            style=" float: left; margin-left: 02%; font-weight: 600; "></label>
+                        <label id="s5"
+                            style=" float: right; margin-right: 60%; font-weight: 600; "></label>
+                    </li>
+                    <hr>
+            </ol>
+            <br>
+            <br>
+        <center>
+            <button id="home" class="btn btn-info" onclick="gotohome()">Back to Home Page</button>
         </center>
         <script src="./js/final.js"></script>
     </body>

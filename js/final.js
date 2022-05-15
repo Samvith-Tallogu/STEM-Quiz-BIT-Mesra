@@ -45,6 +45,19 @@ function final_message(){
 function gotohome(){
     window.location = "./index.html";
 }
-function open_leaderboard(){
-    window.location = "./leaderboard.html";
+
+function getData(){
+  var userRef = firebase.database().ref('users');
+  
+  userRef.orderByChild('score').limitToLast(5).once('value', function(snapshot) {
+    var index = 5;
+    snapshot.forEach(function(childSnapshot) {
+      console.log("Name: " + childSnapshot.val().name + "/" + childSnapshot.val().score);
+      document.getElementById("u" + index).innerHTML = childSnapshot.val().name;
+      document.getElementById("s" + index).innerHTML = childSnapshot.val().score;      
+      index = index - 1;
+    }); 
+  });
 }
+
+getData();
