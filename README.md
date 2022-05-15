@@ -1,2 +1,2 @@
 # STEM-Quiz
- BIT Mesra - test change 2
+ BIT Mesra - Hackathon - STEM Quiz
